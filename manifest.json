@@ -1,0 +1,26 @@
+{
+  "name": "IndiaBuzz",
+  "version": "1.0.0",
+  "description": "Stay up-to-date with the latest news from around the world with our news extension. Get real-time updates on breaking news, top stories, and trending topics across various categories including politics, technology, entertainment, sports, and more. Customize your news feed to follow specific sources or topics of interest. Stay informed and never miss out on important events with our reliable and intuitive news extension.",
+  "manifest_version": 3,
+  "author": "harsh",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://newsapi.org/"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IndiaBuzz",
+    "default_icon": {
+      "16": "images.png",
+      "48": "images.png",
+      "128": "images.png"
+    }
+  },
+  "icons": {
+    "32": "news.png",
+    "48": "news.png",
+    "128": "news.png"
+  }
+}

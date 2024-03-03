@@ -1,0 +1,15 @@
+/* Style for removing marker */
+body {
+  min-width: 500px;
+  background-color: azure;
+}
+h1 {
+  text-align: center;
+  color: white;
+  background-color: rgb(206, 79, 79);
+  border-radius: 5px;
+}
+
+#news {
+  list-style-type: none;
+}
