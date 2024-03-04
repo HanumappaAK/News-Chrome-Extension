@@ -3,7 +3,7 @@ async function getNews() {
   try {
     // Fetch news data from the News API
     const data = await fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=143dce8d77094e9c8b1d61a6f55f5c15"
+      "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=143dce8d77094e9c8b1d61a6f55f5c15"
     );
 
     // Convert the fetched data into JSON format
@@ -30,7 +30,9 @@ async function getNews() {
     });
 
     // Filter out news items with null descriptions
-    relevantData = relevantData.filter((item) => item.description !== null && item.img !== null);
+    relevantData = relevantData.filter(
+      (item) => item.description !== null && item.img !== null
+    );
 
     // Log the relevant data to the console
     console.log(relevantData);
@@ -39,7 +41,7 @@ async function getNews() {
     const newsList = relevantData
       .map(
         (n) =>
-          `<div style="display: flex; padding-bottom: 10px;"><img src="${n.img}" alt="${n.title}" style="width: 160px; height: auto; margin-right: 10px;"><div><h3>${n.title}</h3><p>${n.description}</p><a href="${n.url}" target="_blank">${n.linkText}</a></div></div>`
+          `<div style="display: flex; padding-bottom: 10px;"><img src="${n.img}" alt="${n.title}" style="width: 200px; height: auto; margin-right: 10px;"><div><h3>${n.title}</h3><p>${n.description}</p><a href="${n.url}" target="_blank">${n.linkText}</a></div></div><hr>`
       )
       .join("");
 
